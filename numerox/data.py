@@ -624,8 +624,9 @@ def load_zip(file_path,
         rename_map['feature' + str(i)] = 'x' + str(i)
     for number, name in nx.tournament_iter(active_only=True):
         rename_map['target_' + name] = name
+        rename_map['target'] = name
     df.rename(columns=rename_map, inplace=True)
-
+    
     # convert era, region, and labels to np.float32 or np.float64 depending on the mode
     df['era'] = df['era'].map(ERA_STR_TO_FLOAT)
     df['region'] = df['region'].map(REGION_STR_TO_FLOAT)
