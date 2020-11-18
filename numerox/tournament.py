@@ -32,6 +32,10 @@ TOURNAMENTS = [{
     'name': 'kazutsugi',
     'number': 8,
     'active': True
+}, {
+    'name': 'target',
+    'number': 9,
+    'active': True
 }]
 
 
